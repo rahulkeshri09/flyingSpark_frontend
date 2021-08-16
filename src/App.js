@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Home from './Home';
+import Dashboard from './Dashboard'
+import {useState} from'react';
+function App(props) {
+  const [isLoggedin,setIsLoggedin]=useState(props.store.getState.user);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App font-sans-serif">
+      {
+        isLoggedin?
+          <Dashboard store={props.store} setIsLoggedin={setIsLoggedin}/>
+        :
+          <Home store={props.store} setIsLoggedin={setIsLoggedin}/>
+      }
     </div>
   );
 }

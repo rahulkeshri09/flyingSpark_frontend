@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*------------common styles--------------------*/
+.flex{
+    display: flex;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flex-col{
+    flex-direction: column;
+}
+.jtc-sp-around{
+    justify-content: space-around;
+}
+.jtc-sp-between{
+    justify-content: space-between;
+}
+.App{
+    display: flex;
+    justify-content: center;
+}
+.font-sans-serif{
+    font-family: sans-serif;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+/*----------------login sign up styles-----------------*/
+.login-signup-container{
+    width:500px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #1b6994
+}
+.login-signup-btn{
+    padding: 10px;
+    font-size: 20px;
+    margin:20px 0px ;
+    border: 1px solid #372f36;
+    border-radius: 10px;
+    background-color:#732770;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cornsilk;
+}
+.login-signup-btn:hover{
+    background-color: darkmagenta;
+}
+.active{
+    background-color: darkmagenta;
+}
+form input{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    margin-top: 20px;
+}
+form button{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.checkbox-style{
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+label{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------dashboard  styles-------------*/
+.display-data{
+    width:400px;
+    padding: 100px;
+    background-color: #1b6994;
+    color: cornsilk;
+    font-size: 24px;
+    line-height: 2;
+}
+.logout-btn{
+    position:absolute;
+    top:50px;
+    right:100px;
+    border: 1px solid gray;
+    background-color: darkcyan;
+    color: cornsilk;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+.logout-btn:hover{
+    background-color: cyan;
 }
